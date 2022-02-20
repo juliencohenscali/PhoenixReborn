@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1-windows</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.PowerShell.ConsoleHost, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <HintPath>..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.PowerShell.ConsoleHost\v4.0_3.0.0.0__31bf3856ad364e35\Microsoft.PowerShell.ConsoleHost.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="TreeView.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Tools.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ScreenShare.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="File Upload.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="ShellBis.cs">
+        <SubType>Form</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Tool.resx">
+        <DependentUpon>Tools.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Update="File Upload.resx">
+        <DependentUpon>File Upload.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Update="ScreenShare.resx">
+        <DependentUpon>ScreenShare.cs</DependentUpon>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
